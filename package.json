@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx watch src/http/server.ts"
+    "dev": "tsx watch src/http/server.ts",
+    "seed": "tsx --env-file .env src/db/seed.ts",
+    "studio": "npx drizzle-kit studio"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -15,6 +17,7 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
+    "dayjs": "^1.11.13",
     "drizzle-orm": "^0.43.1",
     "fastify": "^5.3.2",
     "postgres": "^3.4.5",
