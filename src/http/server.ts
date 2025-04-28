@@ -7,6 +7,8 @@ import {
   serializerCompiler,
   validatorCompiler,
 } from 'fastify-type-provider-zod'
+import { createGoalCompletion } from '../functions/create-goal-completion'
+import { getWeekPendingGoals } from '../functions/get-week-pending-goals'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -30,6 +32,28 @@ app.post(
       title: title,
       desiredWeeklyFrequency: desiredWeeklyFrequency,
     })
+  }
+)
+
+app.get('/pending-goals', async () => {
+  const { pendingGoals } = await getWeekPendingGoals()
+
+  return { pendingGoals }
+})
+
+app.post(
+  '/completions',
+  {
+    schema: {
+      body: z.object({
+        goalId: z.string(),
+      }),
+    },
+  },
+  async (request) => {
+    const { goalId } = request.body
+
+    await createGoalCompletion({ goalId })
   }
 )
 
