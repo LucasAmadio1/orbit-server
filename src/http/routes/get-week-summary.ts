@@ -10,7 +10,7 @@ export const getWeekSummaryRoute: FastifyPluginAsyncZod = async (app) => {
         tags: ['goals'],
         description: 'Get week summary',
         response: {
-          201: z.object({
+          200: z.object({
             summary: z.object({
               completed: z.number(),
               total: z.number(),
