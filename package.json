@@ -24,6 +24,7 @@
     "drizzle-orm": "^0.43.1",
     "fastify": "^5.3.2",
     "fastify-type-provider-zod": "^4.0.2",
+    "jose": "^6.0.10",
     "postgres": "^3.4.5",
     "zod": "^3.24.3"
   }

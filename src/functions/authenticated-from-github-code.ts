@@ -1,6 +1,7 @@
 import { eq } from 'drizzle-orm'
 import { db } from '../db'
 import { users } from '../db/schema'
+import { authenticateUser } from '../modules/auth'
 import {
   getAccessTokenFromCode,
   getUserFromAccessToken,
@@ -41,4 +42,8 @@ export async function authenticateFromGithubCode({
 
     userId = insertedUser.id
   }
+
+  const token = await authenticateUser(userId)
+
+  return { token }
 }
