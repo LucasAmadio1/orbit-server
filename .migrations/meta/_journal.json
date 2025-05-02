@@ -15,6 +15,20 @@
       "when": 1745776035391,
       "tag": "0001_stormy_kronos",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1746192748730,
+      "tag": "0002_noisy_lethal_legion",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1746192854843,
+      "tag": "0003_bent_shaman",
+      "breakpoints": true
     }
   ]
 }
