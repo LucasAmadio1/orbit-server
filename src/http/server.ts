@@ -15,6 +15,7 @@ import { authenticateFromGithubRoute } from './routes/authenticate-from-github'
 import { createCompletionRoute } from './routes/create-completion'
 import { createGoalRoute } from './routes/create-goal'
 import { getPendingGoalsRoute } from './routes/get-pending-goals'
+import { getProfileRoute } from './routes/get-profile'
 import { getWeekSummaryRoute } from './routes/get-week-summary'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -49,6 +50,7 @@ app.register(createCompletionRoute)
 app.register(getPendingGoalsRoute)
 app.register(getWeekSummaryRoute)
 app.register(authenticateFromGithubRoute)
+app.register(getProfileRoute)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('🤯 HTTP server running!')
