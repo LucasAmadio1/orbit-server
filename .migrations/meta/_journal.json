@@ -29,6 +29,13 @@
       "when": 1746192854843,
       "tag": "0003_bent_shaman",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1746401098214,
+      "tag": "0004_wet_crusher_hogan",
+      "breakpoints": true
     }
   ]
 }
