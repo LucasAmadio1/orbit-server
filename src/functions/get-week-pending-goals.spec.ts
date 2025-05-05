@@ -27,7 +27,9 @@ describe('get week pending goals', () => {
     })
 
     await makeGoalCompletion({ goalId: goal1.id })
+
     await makeGoalCompletion({ goalId: goal2.id })
+
     await makeGoalCompletion({ goalId: goal3.id })
     await makeGoalCompletion({ goalId: goal3.id })
 
