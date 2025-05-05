@@ -34,5 +34,8 @@ jobs:
       - name: Set up environment variables
         run: |
           echo "DATABASE_URL=postgresql://docker:docker@localhost:5432/inorbit_test" >> $GITHUB_ENV
+          echo "GITHUB_CLIENT_ID=${{ secrets.GITHUB_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "GITHUB_CLIENT_SECRET=${{ secrets.GITHUB_CLIENT_SECRET }}" >> $GITHUB_ENV
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> $GITHUB_ENV
 
       - run: yarn test
