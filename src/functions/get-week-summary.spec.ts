@@ -77,7 +77,7 @@ describe('get week pending summary', () => {
             }),
 
             expect.objectContaining({
-              title: 'teste',
+              title: 'Nadar',
             }),
           ]),
         },
