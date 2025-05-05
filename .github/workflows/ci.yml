@@ -22,6 +22,10 @@ jobs:
           --health-timeout 5s
           --health-retries 10
 
+    defaults:
+      run:
+        working-directory: myfunctionname
+
     steps:
       - uses: actions/checkout@v4
 
