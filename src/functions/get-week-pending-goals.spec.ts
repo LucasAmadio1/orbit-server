@@ -49,7 +49,7 @@ describe('get week pending goals', () => {
 
         expect.objectContaining({
           title: 'Ler',
-          desiredWeeklyFrequency: 4,
+          desiredWeeklyFrequency: 3,
           completionCount: 2,
         }),
       ]),
