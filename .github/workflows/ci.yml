@@ -24,7 +24,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: myfunctionname
+        working-directory: ./src
 
     steps:
       - uses: actions/checkout@v4
