@@ -16,6 +16,7 @@ import { createCompletionRoute } from './routes/create-completion'
 import { createGoalRoute } from './routes/create-goal'
 import { getPendingGoalsRoute } from './routes/get-pending-goals'
 import { getProfileRoute } from './routes/get-profile'
+import { getUserExperienceAndLevel } from './routes/get-user-experience-and-level'
 import { getWeekSummaryRoute } from './routes/get-week-summary'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -51,6 +52,7 @@ app.register(getPendingGoalsRoute)
 app.register(getWeekSummaryRoute)
 app.register(authenticateFromGithubRoute)
 app.register(getProfileRoute)
+app.register(getUserExperienceAndLevel)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('🤯 HTTP server running!')
