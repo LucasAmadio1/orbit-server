@@ -4,7 +4,7 @@ import { makeGoalCompletion } from '../../tests/factories/make-goal-completion'
 import { makeUser } from '../../tests/factories/make-user'
 import { getWeekPendingGoals } from './get-week-pending-goals'
 
-describe('get week pending goals', () => {
+describe('get week pending goals.', () => {
   it('should be able to get week pending goals', async () => {
     const user = await makeUser()
 
