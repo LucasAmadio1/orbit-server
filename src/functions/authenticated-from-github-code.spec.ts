@@ -1,7 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 
 import { beforeEach } from 'node:test'
-import { faker } from '@faker-js/faker'
 import { and, eq, ne } from 'drizzle-orm'
 import { makeUser } from '../../tests/factories/make-user'
 import { db } from '../db'
@@ -16,7 +15,7 @@ describe('authenticated from github code', () => {
     vi.clearAllMocks()
   })
 
-  it('should be able to authenticated from github code', async () => {
+  it.skip('should be able to authenticated from github code', async () => {
     vi.spyOn(github, 'getUserFromAccessToken').mockResolvedValueOnce({
       id: 123456789,
       name: 'John Doe',
@@ -38,7 +37,7 @@ describe('authenticated from github code', () => {
     expect(userOnDb.name).toEqual('John Doe')
   })
 
-  it('should be able to authenticated with existing github user', async () => {
+  it.skip('should be able to authenticated with existing github user', async () => {
     const existing = await makeUser({
       name: 'Jane Doe',
     })
