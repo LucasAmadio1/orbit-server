@@ -35,4 +35,5 @@ jobs:
           cache: "npm"
 
       - run: npm ci
+      - run: sleep 10
       - run: npm run test
