@@ -3,7 +3,9 @@ import { z } from 'zod'
 import { getUserLevelAndExperience } from '../../functions/get-user-level-and-experience'
 import { authenticateUserHook } from '../hooks/authenticate-user'
 
-export const getUserExperienceAndLevel: FastifyPluginAsyncZod = async (app) => {
+export const getUserExperienceAndLevelRoute: FastifyPluginAsyncZod = async (
+  app
+) => {
   app.get(
     '/profile/gamification',
     {
@@ -11,6 +13,7 @@ export const getUserExperienceAndLevel: FastifyPluginAsyncZod = async (app) => {
       schema: {
         tags: ['gamification'],
         description: 'Get user experience and level',
+        operationId: 'getUserExperienceAndLevel',
         response: {
           200: z.object({
             experience: z.number(),
